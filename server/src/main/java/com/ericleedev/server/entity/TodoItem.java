@@ -5,7 +5,7 @@ import com.fasterxml.jackson.annotation.JsonBackReference;
 import javax.persistence.*;
 
 @Entity
-@Table(name="toDoItems")
+@Table(name="to_do_items")
 public class TodoItem {
 
     @Id
