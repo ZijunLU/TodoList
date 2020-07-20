@@ -2,6 +2,7 @@ package com.ericleedev.server.service;
 
 import com.ericleedev.server.dao.ToDoListRepository;
 import com.ericleedev.server.entity.TodoList;
+import com.ericleedev.server.error.NotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -34,7 +35,7 @@ public class TodoListServices implements ITodoListServices{
         TodoList list = null;
 
         if(query == null){
-            throw new RuntimeException("TodoList Not found ! Id - " + theId);
+            throw new NotFoundException("TodoList Not found ! Id - " + theId);
         }
         else {
             list = query.get();
